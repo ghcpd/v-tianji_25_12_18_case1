@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root{
+  --bg:#0f1724;
+  --panel:#0b1220;
+  --muted:#94a3b8;
+  --accent:#7c3aed;
+  --glass: rgba(255,255,255,0.03);
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%;}
+body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:linear-gradient(180deg,#071029 0%, #0b1220 100%); color:#dbeafe; margin:0}
+
+.app{display:flex; gap:20px; padding:20px; height:100vh}
+.sidebar{width:320px; background:var(--panel); border-radius:12px; padding:14px; display:flex; flex-direction:column}
+.header{display:flex; align-items:center; justify-content:space-between; margin-bottom:8px}
+.search{margin-bottom:10px}
+.conversation-list{overflow:auto; flex:1}
+.conversation-item{padding:10px; border-radius:8px; display:flex; gap:12px; align-items:center; cursor:pointer}
+.conversation-item:hover{background:var(--glass)}
+.avatar{width:44px; height:44px; border-radius:8px; background:linear-gradient(135deg,var(--accent),#4c1d95); display:flex; align-items:center; justify-content:center; font-weight:700}
+.unread{background:#ef4444; color:white; padding:6px 8px; border-radius:999px; font-size:12px}
+
+.chat{flex:1; background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent); border-radius:12px; padding:14px; display:flex; flex-direction:column}
+.messages{flex:1; overflow:auto; padding:12px; display:flex; flex-direction:column; gap:8px}
+.msg {max-width:70%; padding:10px 12px; border-radius:10px}
+.msg.me{align-self:flex-end; background:linear-gradient(90deg,var(--accent),#5b21b6)}
+.msg.other{align-self:flex-start; background:rgba(255,255,255,0.03)}
+.compose{display:flex; gap:8px; margin-top:12px}
+.input{flex:1; padding:10px; border-radius:10px; background:transparent; border:1px solid rgba(255,255,255,0.04); color:inherit}
+.send{background:var(--accent); border:none; color:white; padding:10px 14px; border-radius:10px}
+
+.topbar{display:flex; align-items:center; justify-content:space-between; margin-bottom:6px}
+.contact-list{display:flex; flex-direction:column; gap:8px}
+.contact-item{padding:8px; border-radius:8px; background:transparent}
+.search-input{padding:8px; border-radius:8px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.03); color:inherit}
+
+.small{font-size:13px; color:var(--muted)}
